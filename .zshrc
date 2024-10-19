@@ -9,6 +9,9 @@ alias ls='ls --color=auto'
 alias update='yay -Syu --devel && yay -Rns $(yay -Qdtq)'
 
 alias gs='git status'
+alias ugt='~/.scripts/update_git_token.sh'
+
+alias lscommands='cat ~/.zshrc | grep alias'
 
 # Correct Delete key binding
 bindkey "^[[3~" delete-char
