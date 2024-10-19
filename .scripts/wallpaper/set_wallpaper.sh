@@ -16,7 +16,7 @@ if [ ! -f "$1" ]; then
 fi
 
 new_wall=$(realpath "$1")
-symlink=~/.config/hypr/wallpaper.jpg
+symlink=~/Pictures/wallpapers/wallpaper.jpg
 
 rm $symlink
 
