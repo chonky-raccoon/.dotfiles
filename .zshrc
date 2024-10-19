@@ -11,7 +11,7 @@ alias update='yay -Syu --devel && yay -Rns $(yay -Qdtq)'
 alias gs='git status'
 alias ugt='~/.scripts/update_git_token.sh'
 
-alias wallpaper='~/.scripts/change_wallpaper.sh'
+alias wallpaper='~/.scripts/wallpaper/set_wallpaper.sh'
 
 alias lscommands='cat ~/.zshrc | grep alias'
 
