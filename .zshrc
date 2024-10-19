@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 alias update='yay -Syu --devel && yay -Rns $(yay -Qdtq)'
 
 alias gs='git status'
-alias ugt='~/.scripts/update_git_token.sh'
+alias ugt='~/.scripts/git/update_git_token.sh'
 
 alias wallpaper='~/.scripts/wallpaper/set_wallpaper.sh'
 
