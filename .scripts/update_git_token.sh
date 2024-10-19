@@ -2,7 +2,10 @@
 
 # Check if the correct number of arguments is provided
 if [ "$#" -ne 3 ]; then
-  echo "Usage: update-git-token <username> <repo> <token>"
+  echo "Usage:"
+  echo "    update-git-token <username> <repo> <token>"
+  echo "    or"
+  echo "    ugt <username> <repo> <token>"
   exit 1
 fi
 
