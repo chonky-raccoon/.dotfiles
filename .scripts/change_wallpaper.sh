@@ -15,12 +15,15 @@ if [ ! -f "$1" ]; then
     exit 1
 fi
 
-rm ~/.config/hypr/wallpaper.jpg
+new_wall=$(realpath "$1")
+symlink=~/.config/hypr/wallpaper.jpg
 
-ln -s "$1" ~/.config/hypr/wallpaper.jpg
+rm $symlink
 
-killall  swaybg
+ln -s "$new_wall" $symlink
 
-nohup swaybg -i ~/.config/hypr/wallpaper.jpg -m fill > /dev/null 2>&1 & 
+killall swaybg > /dev/null 2>&1
 
-echo "Wallpaper changed to $1"
+nohup swaybg -i $symlink -m fill > /dev/null 2>&1 & 
+
+echo "Wallpaper changed to $new_wall"
