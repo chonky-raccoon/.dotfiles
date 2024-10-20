@@ -12,18 +12,18 @@ font = SFMono Nerd Font Mono
 font-size = 12
 
 prompt-text = "Applications: "
-prompt-color = #8aadf4
+prompt-color = #91d7e3
 
 input-color = #FFFFFF
 
 text-cursor-style = underscore
-text-cursor-color = #8aadf4
+text-cursor-color = #91d7e3
 
 default-result-color = #FFFFFF
 
-selection-color = #f5bde6
+selection-color = #f0c6c6
 
-selection-match-color = #8aadf4
+selection-match-color = #91d7e3
 
 result-spacing = 0
 
