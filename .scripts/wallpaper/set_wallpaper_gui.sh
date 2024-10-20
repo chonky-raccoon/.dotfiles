@@ -9,4 +9,4 @@ if [ -z "$selected_file" ]; then
     exit 1
 fi
 
-./set_wallpaper.sh "$selected_file"
+~/.scripts/wallpaper/set_wallpaper.sh "$selected_file"
