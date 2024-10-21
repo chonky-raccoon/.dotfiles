@@ -10,6 +10,7 @@
         "clock"
     ],
 	"modules-right": [
+        "custom/updates",
         "wireplumber",
 	    "custom/wallpaper"
 	],
@@ -32,18 +33,29 @@
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%A %d %B %Y}",
-	"tooltip": false
+	    "tooltip": false
     },
-    "custom/wallpaper":{
-        "format":" ",
-        "on-click": " ~/.scripts/wallpaper/set_wallpaper_gui.sh"
+    "custom/updates":{
+        "format":"{}",
+        "tooltip": false,
+        "exec": "$HOME/.scripts/updates/update_count.sh",
+        "return-type": "json",
+        "interval": 600,
+        "signal": 9, 
+        "on-click": "kitty $HOME/.scripts/updates/update_system.sh", 
+        "on-click-right": "pkill -SIGRTMIN+9 waybar"
     },
     "wireplumber": {
         "format": "{volume}%",
         "format-muted": "Muted",
         "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
-	"on-click-right": "$HOME/.scripts/wireplumber/cycle_sinks.sh",
+	    "on-click-right": "$HOME/.scripts/wireplumber/cycle_sinks.sh",
         "max-volume": 100,
         "scroll-step": 5
+    },
+    "custom/wallpaper":{
+        "format":"",
+        "tooltip": false,
+        "on-click": "$HOME/.scripts/wallpaper/set_wallpaper_gui.sh"
     }
 }

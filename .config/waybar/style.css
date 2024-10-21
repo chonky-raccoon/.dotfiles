@@ -1,6 +1,7 @@
 @import "colors.css";
 
 * {
+    font-family: "SFMono Nerd Font Mono";
     font-size: 16px;
 }
 
@@ -39,14 +40,12 @@ button {
 }
 
 #clock,
+#custom-updates,
 #wireplumber,
 #custom-wallpaper
 {
-    padding: 0 10px;
-}
-
-#clock {
     color: @flamingo;
+    padding: 0 10px;
 }
 
 #clock:hover {
@@ -58,7 +57,7 @@ button {
 }
 
 #custom-wallpaper {
-    color: @flamingo;
+    font-size: 20px;
 }
 
 #custom-wallpaper:hover {
@@ -91,10 +90,13 @@ label:focus {
 }
 
 #wireplumber {
-    min-width: 70px;
-    color: @flamingo;
+    min-width: 40px;
 }
 
 #wireplumber:hover {
+    color: @sky;
+}
+
+#custom-updates:hover {
     color: @sky;
 }
