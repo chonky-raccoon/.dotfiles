@@ -6,8 +6,6 @@ fi
 alias ll='ls -Al --group-directories-first --si --color=auto'
 alias ls='ls --color=auto'
 
-alias update='yay -Syu --devel && yay -Qdtq | xargs -r yay -Rns'
-
 alias gs='git status'
 alias ugt='~/.scripts/git/update_git_token.sh'
 
@@ -18,14 +16,7 @@ alias lscommands='cat ~/.zshrc | grep alias'
 # Correct Delete key binding
 bindkey "^[[3~" delete-char
 
-
-
-
-
-
-
 eval "$(starship init zsh)"
-
 
 neofetch
 echo "		Welcome to Arch Linux. Remember your daily update."
