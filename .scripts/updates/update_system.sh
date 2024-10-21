@@ -1,18 +1,18 @@
 #!/bin/bash
 
-echo "Checking for updates..."
+echo "󰑓 Checking for updates..."
 
 updates=$(yay -Qu --devel | grep -v '^S')
 
 if [[ -z "$n" ]]; then
-    echo 
-    echo "System is up to date."
-    echo
-    echo "Closing in 2s"
+    echo -e "\n No pending updates found. System up to date."
+    echo -e "\n󱎫 Closing in 3s"
     sleep 1
-    echo "Closing in 1s"
+    echo "󱎫 Closing in 2s"
     sleep 1
-    exit 0;
+    echo "󱎫 Closing in 1s"
+    sleep 1
+    exit 0
 fi
 
 echo "Pending updates: "
