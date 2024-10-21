@@ -23,20 +23,20 @@ button {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: @flamingo;
+    color: @color1;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
-    color: @sky;
+    color: @color2;
 }
 
 #workspaces button.active {
-    box-shadow: inset 0 -3px @sky;
+    box-shadow: inset 0 -3px @color2;
 }
 
 #workspaces button.urgent {
-    background-color: @sky;
+    background-color: @color2;
 }
 
 #clock,
@@ -44,12 +44,12 @@ button {
 #wireplumber,
 #custom-wallpaper
 {
-    color: @flamingo;
+    color: @color1;
     padding: 0 10px;
 }
 
 #clock:hover {
-    color: @sky;
+    color: @color2;
 }
 
 #window {
@@ -61,7 +61,7 @@ button {
 }
 
 #custom-wallpaper:hover {
-    color: @sky;
+    color: @color2;
 }
 
 .modules-right,.modules-left,.modules-center {
@@ -94,9 +94,9 @@ label:focus {
 }
 
 #wireplumber:hover {
-    color: @sky;
+    color: @color2;
 }
 
 #custom-updates:hover {
-    color: @sky;
+    color: @color2;
 }
