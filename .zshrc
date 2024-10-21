@@ -6,7 +6,7 @@ fi
 alias ll='ls -Al --group-directories-first --si --color=auto'
 alias ls='ls --color=auto'
 
-alias update='yay -Syu --devel && yay -Rns $(yay -Qdtq)'
+alias update='yay -Syu --devel && yay -Qdtq | xargs -r yay -Rns'
 
 alias gs='git status'
 alias ugt='~/.scripts/git/update_git_token.sh'
