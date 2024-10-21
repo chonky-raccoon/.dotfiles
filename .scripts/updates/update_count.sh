@@ -1,6 +1,6 @@
 #!/bin/sh
 
-n=$(checkupdates | awk '{print $1}' | wc -l)
+n=$(yay -Qu --devel | wc -l)
 
 if [[ "$n" -eq 0 ]]; then
     text=""

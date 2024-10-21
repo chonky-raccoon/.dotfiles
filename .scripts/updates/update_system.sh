@@ -1,8 +1,23 @@
 #!/bin/bash
 
+echo "Checking for updates..."
+
+updates=$(yay -Qu --devel | grep -v '^S')
+
+if [[ -z "$n" ]]; then
+    echo 
+    echo "System is up to date."
+    echo
+    echo "Closing in 2s"
+    sleep 1
+    echo "Closing in 1s"
+    sleep 1
+    exit 0;
+fi
+
 echo "Pending updates: "
 echo "-----------------"
-yay -Qu
+echo "$updates"
 echo "-----------------"
 
 # Prompt the user for a yes/no question
