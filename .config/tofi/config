@@ -1,35 +1,33 @@
+anchor = center
+
 width = 100%
 height = 100%
-
-background-color = #000A
-border-width = 0
-outline-width = 0
-
-hide-cursor = true
-text-cursor = true
-
-font = SFMono Nerd Font Mono
-font-size = 12
-
-prompt-text = "Applications: "
-prompt-color = #91d7e3
-
-input-color = #FFFFFF
-
-text-cursor-style = underscore
-text-cursor-color = #91d7e3
-
-default-result-color = #FFFFFF
-
-selection-color = #f0c6c6
-
-selection-match-color = #91d7e3
-
-result-spacing = 0
-
-anchor = center
 
 padding-top = 40%
 padding-left = 40%
 
+border-width = 0
+outline-width = 0
+
+font = SFMono Nerd Font Mono
+font-size = 12
+
+background-color = #000A
+
+prompt-color = #D65D0E
+text-cursor-color = #D65D0E
+selection-match-color = #D65D0E
+
+input-color = #F9EBC1
+default-result-color = #F9EBC1
+
+selection-color = #689D6A
+
+hide-cursor = true
+text-cursor = true
+
+prompt-text = "Applications: "
+text-cursor-style = underscore
+
+result-spacing = 0
 num-results = 5
