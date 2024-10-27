@@ -2,9 +2,9 @@
 
 echo "󰑓 Checking for updates..."
 
-updates=$(yay -Qu --devel | grep -v '^S')
+updates=$(yay -Qu | grep -v '^S')
 
-if [[ -z "$n" ]]; then
+if [[ -z "$updates" ]]; then
     echo -e "\n No pending updates found. System up to date."
     echo -e "\n󱎫 Closing in 3s"
     sleep 1
@@ -15,20 +15,21 @@ if [[ -z "$n" ]]; then
     exit 0
 fi
 
-echo "Pending updates: "
-echo "-----------------"
-echo "$updates"
-echo "-----------------"
+echo -e "\n󰚰 Available updates: "
+while IFS= read -r line; do
+   echo -e "\t $line"
+done <<< "$updates"
 
 # Prompt the user for a yes/no question
-read -p "Do you want to proceed with the update? (y/n): " answer
+echo
+read -p "  Do you want to proceed with the update? (y/n): " answer
 
 # Convert the answer to lowercase for easier comparison
 answer=$(echo "$answer" | tr '[:upper:]' '[:lower:]')
 
 if [[ "$answer" == "y" || "$answer" == "yes" ]]; then
     echo "Proceeding with the update..."
-    yay -Syu --devel --noconfirm
+    yay -Syu --noconfirm
 
     # Clean orphaned packages
     echo "Cleaning orphaned packages..."
@@ -40,8 +41,17 @@ if [[ "$answer" == "y" || "$answer" == "yes" ]]; then
         echo "No orphaned packages to remove."
     fi
 
-    echo "System update complete."
+    echo "󱝁 System update complete."
     pkill -SIGRTMIN+9 waybar
 else
-    echo "Suit yourself bozo!"
+    echo "  Suit yourself bozo! "
 fi
+
+echo -e "\n󱎫 Closing in 3s"
+sleep 1
+echo "󱎫 Closing in 2s"
+sleep 1
+echo "󱎫 Closing in 1s"
+sleep 1
+
+exit 0

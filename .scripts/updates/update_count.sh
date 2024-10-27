@@ -1,6 +1,6 @@
 #!/bin/sh
 
-n=$(yay -Qu --devel | wc -l)
+n=$(yay -Qu | wc -l)
 
 if [[ "$n" -eq 0 ]]; then
     text=""
